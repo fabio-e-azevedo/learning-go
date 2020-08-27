@@ -54,4 +54,15 @@ func main() {
 	filho.Idade = 3
 	filho.Email = "arthur@gmail.com"
 	filhos = append(filhos, filho)
+
+	filho.Nome = "Francisco"
+	filho.Idade = 7
+	filho.Email = "francisco@gmail.com"
+	filhos = append(filhos, filho)
+
+	filha := new(Filho)
+	filha.Nome = "Joyce"
+	filha.Idade = 22
+	filha.Email = "joyce@gmail.com"
+
 }
