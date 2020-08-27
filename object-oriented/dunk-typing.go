@@ -65,4 +65,7 @@ func main() {
 	filha.Idade = 22
 	filha.Email = "joyce@gmail.com"
 
+	showDados(pai)
+	showDados(filhos)
+	showDados(filha)
 }
