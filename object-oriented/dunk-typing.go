@@ -40,3 +40,18 @@ func (f Filhos) Dados() string {
 func showDados(membro Familia) {
 	fmt.Println(membro.Dados())
 }
+
+func main() {
+	var filhos Filhos
+	var filho Filho
+
+	pai := new(Pai)
+	pai.Nome = "Jefferson"
+	pai.Idade = 38
+	pai.Cpf = "00.xxx.xxx-xx"
+
+	filho.Nome = "Arthur"
+	filho.Idade = 3
+	filho.Email = "arthur@gmail.com"
+	filhos = append(filhos, filho)
+}
