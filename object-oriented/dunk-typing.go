@@ -36,3 +36,7 @@ func (f Filhos) Dados() string {
 	}
 	return concat
 }
+
+func showDados(membro Familia) {
+	fmt.Println(membro.Dados())
+}
