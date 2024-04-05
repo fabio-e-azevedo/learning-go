@@ -11,7 +11,7 @@ import (
 func main() {
 
 	requestBody, err := json.Marshal(map[string]string{
-		"name": "Fabio Azevedo",
+		"name":    "Fabio Azevedo",
 		"twitter": "@fabioeazevedo",
 	})
 
