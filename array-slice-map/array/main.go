@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 	//Declaration 1
@@ -14,6 +17,7 @@ func main() {
 	//arr := [5]int{1,2,3,4,5}
 
 	fmt.Println(arr)
+	fmt.Printf("Variable arr is Type %s: %T\n", reflect.TypeOf(arr).Kind(), arr)
 
 	names := [4]string{
 		"John",
@@ -22,4 +26,5 @@ func main() {
 		"Ringo",
 	}
 	fmt.Println(names)
+	fmt.Printf("Variable names is Type %s: %T\n", reflect.TypeOf(names).Kind(), names)
 }

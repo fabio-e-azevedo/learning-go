@@ -15,6 +15,7 @@ func main() {
 		log.Fatal(err)
 	}
 
+	// start with upper case if it's a public field
 	var azAccountGet struct {
 		AccessToken  string `json:"accessToken"`
 		ExpiresOn    string `json:"expiresOn"`
@@ -29,5 +30,6 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fmt.Printf("%s: %s", azAccountGet.TokenType, azAccountGet.AccessToken)
+	//fmt.Printf("%s\n", azAccountGet.Subscription)
+	fmt.Printf("Authorization: %s %s", azAccountGet.TokenType, azAccountGet.AccessToken)
 }
