@@ -1,15 +1,26 @@
 package main
 
 import (
-    "fmt"
-    "time"
+	"fmt"
+	"time"
 )
 
 func main() {
-    t := time.Now()
-    if t.YearDay() == 256 {
-        fmt.Println("Programmer Congratulations!!!")
-    } else {
-        fmt.Println("...")
-    }
+	currentTime := time.Now()
+	yearDay := currentTime.YearDay()
+
+	if yearDay == 256 {
+		fmt.Println("Programmer Congratulations!!!")
+	} else if yearDay < 256 {
+		fmt.Printf("%d days left\n", 256-yearDay)
+	} else {
+		currentYear := currentTime.Year()
+		var yearDaysTotal int
+		if currentYear%4 == 0 && (currentYear%100 != 0 || currentYear%400 == 0) {
+			yearDaysTotal = 366
+		} else {
+			yearDaysTotal = 365
+		}
+		fmt.Printf("%d days left\n", (yearDaysTotal-yearDay)+256)
+	}
 }
