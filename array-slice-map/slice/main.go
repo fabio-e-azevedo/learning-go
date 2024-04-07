@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"reflect"
+	"slices"
 	"strings"
 )
 
@@ -47,6 +48,11 @@ func main() {
 
 	numbers = append(numbers, 50, 60)
 	printSlice(numbers)
+
+	a := []string{"Dead ", "Duck "}
+	b := []string{"is ", "death"}
+	c := slices.Concat(a, b)
+	fmt.Println(c)
 }
 
 func printSlice(s []int) {
