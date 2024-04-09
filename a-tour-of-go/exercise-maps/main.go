@@ -12,11 +12,11 @@ import (
 
 func WordCount(s string) map[string]int {
 	words := strings.Fields(s)
-	count_word := make(map[string]int)
+	word_count := make(map[string]int)
 
 	var count int
 	for _, item := range words {
-		_, ok := count_word[item]
+		_, ok := word_count[item]
 		if ok {
 			continue
 		}
@@ -26,10 +26,10 @@ func WordCount(s string) map[string]int {
 				count++
 			}
 		}
-		count_word[item] = count
+		word_count[item] = count
 	}
-	//fmt.Println(count_word)
-	return count_word
+	//fmt.Println(word_count)
+	return word_count
 }
 
 func main() {
