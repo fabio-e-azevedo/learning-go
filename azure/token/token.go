@@ -31,6 +31,6 @@ func Get() string {
 	}
 
 	// fmt.Printf("%s\n", azAccountGet.Subscription)
-	out := fmt.Sprintf("Authorization: %s %s", azAccountGet.TokenType, azAccountGet.AccessToken)
-	return out
+
+	return fmt.Sprintf("Authorization: %s %s", azAccountGet.TokenType, azAccountGet.AccessToken)
 }
