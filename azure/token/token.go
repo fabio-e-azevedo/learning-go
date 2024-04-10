@@ -7,6 +7,7 @@ import (
 	"os/exec"
 )
 
+// Get azure token using azcli
 func Get() string {
 	// start with upper case if it's a public field
 	var azAccountGet struct {

@@ -53,9 +53,18 @@ func main() {
 	b := []string{"is ", "death"}
 	c := slices.Concat(a, b)
 	fmt.Println(c)
+
+	// func make([]T, len, cap) []T
+	mySlice1 := make([]int, 5, 10)
+	printSlice(mySlice1)
+
+	// the capacity argument is usually omitted and defaults to the length
+	mySlice2 := make([]int, 5)
+	printSlice(mySlice2)
 }
 
 func printSlice(s []int) {
+	fmt.Printf("\n%v\n", strings.Repeat("=", 79))
 	fmt.Printf("len=%d cap=%d values=%v\n", len(s), cap(s), s)
 	fmt.Println(strings.Repeat("=", 79))
 }
